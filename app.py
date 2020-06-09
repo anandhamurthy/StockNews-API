@@ -4,13 +4,16 @@ import dash_core_components as dcc
 import plotly.graph_objects as go
 import pandas as pd
 from dash.dependencies import Input, Output
+from flask import Flask
 
 # Load data
 df = pd.read_csv('data/stockdata2.csv', index_col=0, parse_dates=True)
 df.index = pd.to_datetime(df['Date'])
 
 # Initialize the app
-app = dash.Dash(__name__)
+server = Flask(__name__)
+app = dash.Dash(__name__, external_stylesheets=external_stylesheets,server=server)
+
 app.config.suppress_callback_exceptions = True
 
 
