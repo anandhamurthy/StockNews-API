@@ -12,7 +12,7 @@ df.index = pd.to_datetime(df['Date'])
 
 # Initialize the app
 server = Flask(__name__)
-app = dash.Dash(__name__, external_stylesheets=external_stylesheets,server=server)
+app = dash.Dash(__name__, server=server)
 
 app.config.suppress_callback_exceptions = True
 
