@@ -22,7 +22,7 @@ def news_search_transcriptdaily():
                 n = {
                     "title": j.get('title'),
                     "text": t,
-                    "a": href
+                    "link": href
                 }
                 news.append(n)
     return ({"news": news})
