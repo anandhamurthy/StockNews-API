@@ -7,7 +7,7 @@ app = Flask(__name__)
 global soup1
 
 
-@app.route('/',methods=['GET','POST'])
+@app.route('/news',methods=['GET','POST'])
 def news_search_transcriptdaily():
     url="https://transcriptdaily.com/markets"
     page = requests.get(url)
