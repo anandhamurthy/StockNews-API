@@ -6,6 +6,5 @@ MarkupSafe==1.1.1
 Werkzeug==0.15.5
 numpy>=1.9.2
 pandas>=0.19
-yfinance==0.1.54
-pandas-datareader==0.8.1
-dash==1.12.0
+beautifulsoup4==4.9.1
+requests==2.23.0
